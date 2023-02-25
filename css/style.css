@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+
+:root {
+  --bright-red: hsl(12, 88%, 59%);
+  --dark-blue: hsl(228, 39%, 23%);
+  --dark-grayish-blue: hsl(227, 12%, 61%);
+  --very-dark-blue: hsl(233, 12%, 13%);
+  --very-pale-red: hsl(13, 100%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  background: var(--very-light-gray);
+}
+
+#header {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-link {
+  margin-right: 1.875rem;
+}
+
+.nav-link:last-child {
+  margin-right: 0;
+}
+
+.nav-link a {
+  pointer-events: all;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--dark-blue);
+  font-weight: 500;
+}
+
+.nav-link a:hover {
+  opacity: 0.5;
+}
+
+.get-started-btn {
+  pointer-events: all;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 0.9375rem 1.875rem;
+  border-radius: 3.125rem;
+  background: var(--bright-red);
+  color: var(--very-light-gray);
+  font-weight: 700;
+
+  -webkit-box-shadow: 0rem 0.3125rem 0.3125rem -0.1563rem var(--bright-red);
+  -moz-box-shadow: 0rem 0.3125rem 0.3125rem -0.1563rem var(--bright-red);
+  box-shadow: 0rem 0.3125rem 0.3125rem -0.1563rem var(--bright-red);
+}
+
+.get-started-btn:hover {
+  opacity: 0.75;
+}
+
+.overlay {
+  display: none;
+}
+
+#mobile-navigation {
+  display: none;
+}
+
+.toggle-menu {
+  display: none;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  margin-top: 4.6875rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  color: var(--dark-blue);
+  line-height: 1.25;
+}
+
+.hero-description {
+  color: var(--dark-grayish-blue);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 1.875rem 0;
+  width: 60%;
+}
+
+.bg-pattern-hero {
+  position: absolute;
+  z-index: -1;
+  top: -22.5%;
+  right: -10%;
+}
+
+.hero-img {
+  margin-right: -1.25rem;
+}
+
+#features {
+  margin-top: 4.6875rem;
+  position: relative;
+}
+
+#features .wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.whats-different {
+  flex: 1;
+}
+
+.whats-different-title {
+  color: var(--dark-blue);
+  font-size: 2.5rem;
+  margin-bottom: 1.875rem;
+}
+
+.whats-different-description {
+  color: var(--dark-grayish-blue);
+  line-height: 1.5;
+  width: 60%;
+}
+
+.features-list {
+  flex: 0.93;
+}
+
+.feature-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.625rem;
+}
+
+.feature-title h3 {
+  color: var(--dark-blue);
+}
+
+.feature-number {
+  display: inline-block;
+  margin-right: 1.25rem;
+  background: var(--bright-red);
+  color: var(--very-light-gray);
+  font-weight: 500;
+  padding: 0.625rem 1.875rem;
+  border-radius: 3.125rem;
+}
+
+.feature-description {
+  color: var(--dark-grayish-blue);
+  line-height: 1.5;
+  margin-left: 6.25rem;
+}
+
+.feature:nth-of-type(2) {
+  margin: 1.875rem 0;
+}
+
+.bg-pattern-features {
+  position: absolute;
+  z-index: -1;
+  top: 60%;
+  left: -45%;
+}
+
+#testimonials {
+  text-align: center;
+  margin: 7.8125rem 0;
+  position: relative;
+}
+
+.testimonials-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 6.25rem 0;
+  background: var(--very-light-gray);
+}
+
+.testimonials-title {
+  font-size: 2.5rem;
+  color: var(--dark-blue);
+}
+
+.avatar {
+  width: 3.125rem;
+  height: 3.125rem;
+  object-fit: contain;
+}
+
+.name {
+  margin: 1.25rem 0;
+  color: var(--dark-blue);
+}
+
+.testimonial-quote {
+  color: var(--dark-grayish-blue);
+  line-height: 1.5;
+}
+
+.dots {
+  display: none;
+}
+
+#simplify {
+  background: var(--bright-red);
+  position: relative;
+  height: 12.5rem;
+  overflow: hidden;
+}
+
+.bg-simplify-desktop {
+  position: absolute;
+  top: -70%;
+  left: 20%;
+}
+
+.bg-simplify-mobile {
+  display: none;
+}
+
+#simplify .wrapper {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.simplify-title {
+  font-size: 2.5rem;
+  color: var(--very-light-gray);
+}
+
+.get-started-simplify {
+  background: var(--very-light-gray);
+  color: var(--bright-red);
+}
+
+#footer {
+  background: var(--very-dark-blue);
+  padding: 3.125rem 0;
+}
+
+#footer .wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.125rem;
+}
+
+.social-icons a {
+  pointer-events: all;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.9375rem;
+}
+
+.social-icons a:last-of-type {
+  margin-right: 0;
+}
+
+.social-icons a i {
+  pointer-events: all;
+  cursor: pointer;
+  color: var(--very-light-gray);
+  font-size: 1.25rem;
+}
+
+.social-icons a i:hover {
+  color: var(--bright-red);
+}
+
+.footer-links-wrapper {
+  width: 35%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer-nav-links {
+  list-style: none;
+}
+
+.footer-nav-link {
+  margin-bottom: 0.9375rem;
+}
+
+.footer-nav-links .footer-nav-link:last-of-type {
+  margin-bottom: 0;
+}
+
+.footer-nav-link a {
+  pointer-events: all;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--very-light-gray);
+}
+
+.footer-nav-link a:hover {
+  color: var(--bright-red);
+}
+
+form {
+  margin-bottom: 3.75rem;
+  position: relative;
+}
+
+input {
+  pointer-events: all;
+  border: none;
+  outline: none;
+  padding: 0.9375rem;
+  border-radius: 3.125rem;
+  display: inline-block;
+  margin-right: 0.625rem;
+}
+
+button[type="submit"] {
+  pointer-events: all;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: var(--bright-red);
+  color: var(--very-light-gray);
+  font-weight: 700;
+  padding: 0.9375rem 1.5625rem;
+  border-radius: 3.125rem;
+  position: relative;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.75;
+}
+
+.copyright {
+  color: var(--dark-grayish-blue);
+}
+
+.copyright-mobile {
+  display: none;
+}
+
+.error-message {
+  color: red;
+  position: absolute;
+  left: 1%;
+  bottom: -50%;
+
+  display: none;
+}
